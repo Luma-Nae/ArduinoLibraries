@@ -1,7 +1,9 @@
 #ifndef SAILBOAT_ALL_CONFIG_H
 #define SAILBOAT_ALL_CONFIG_H
 //Choose the boat here
+//#define SAILBOAT_BOATLETTE
 #define SAILBOAT_PRO
+
 #define VERSION_ARDUINO "2.0"
 
 #ifdef SAILBOAT_PRO
@@ -24,10 +26,9 @@
 #pragma message("SAILBOAT_TRIMARAN chosen")
 #include <config-Trimaran.h>
 #endif
-
-#ifdef SAILBOAT_DUDE
-#pragma message("DUDE chosen")
-#include <config-dude.h>
+#ifdef SAILBOAT_BOATLETTE
+#pragma message("SAILBOAT_BOATLETTE chosen")
+#include <config-Boatlette.h>
 #endif
 
 #include <config-RC.h>
@@ -61,22 +62,21 @@
 	//SAIL
 	#define WINCH_PIN 7
 #endif
-//WIND DIRECTION SENSOR
-//#define WIND_SENSOR_PIN A0
-//BATTERY SENSOR
-#define BATTERY_SENSOR_PIN A3
+
 
 
 #ifdef CUSTOM_WIND_VANE
-#define WIND_SENSOR_CSN_PIN 25
-	#define WIND_SENSOR_CLK_PIN 27
+	#define WIND_SENSOR_CSN_PIN 25
+	#define WIND_SENSOR_CLK_PIN 27	
 	#define WIND_SENSOR_DO_PIN 29
 #else
-//ORIGINAL WIND DIRECTION SENSOR
-#define WIND_SENSOR_PIN A0
+	//ORIGINAL WIND DIRECTION SENSOR
+	#define WIND_SENSOR_PIN A0
 #endif
 
 
+//BATTERY SENSOR
+#define BATTERY_SENSOR_PIN A3
 
 //GPS
 #define GPS_SERIAL 1

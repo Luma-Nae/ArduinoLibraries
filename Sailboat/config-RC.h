@@ -13,12 +13,13 @@
 #define RC_5 4
 #define RC_6 5
 
-#define RC_PIN_1 A8
-#define RC_PIN_2 A9
-#define RC_PIN_3 A10
-#define RC_PIN_4 A11
-#define RC_PIN_5 A12
-#define RC_PIN_6 A13
+//#define RC_PIN_1 A8
+#define RC_PIN_1 A9
+#define RC_PIN_2 A11
+#define RC_PIN_3 A2
+#define RC_PIN_4 A15
+#define RC_PIN_5 A6
+#define RC_PIN_6 A0
 
 //RC Config
 #ifdef FLYSKY
@@ -101,6 +102,5 @@
 #define RC_SAIL		RC_2
 #define RC_AUTO		RC_3
 #endif
-
 
 #endif

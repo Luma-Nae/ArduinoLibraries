@@ -111,6 +111,10 @@ void GPS::communicateData(){
 
 	lastNMEA.data = nmeaD.c_str();
 
+	//Serial.println("GPS latitude: "+String(msg.latitude));
+	//Serial.println("GPS longitude: "+String(msg.longitude));
+	//Serial.println("GPS altitude: "+String(msg.altitude));
+
 	pub.publish(&msg);
 	pubNMEA.publish(&lastNMEA);
 	pubTime.publish(&timeU);
