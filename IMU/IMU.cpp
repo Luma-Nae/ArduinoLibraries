@@ -101,10 +101,8 @@ void IMU::communicateData(){
 	velMsg.angular.y = rot[1];
 	velMsg.angular.z = rot[2];
 
-	//Serial.println("IMU IMU x-rot: "+String(msg.orientation.x));
-	//Serial.println("IMU IMU y-rot: "+String(msg.orientation.y));
-	//Serial.println("IMU IMU z-rot: "+String(msg.orientation.z));
-	//Serial.println("IMU IMU w-rot: "+String(msg.orientation.w));
+    Sailboat::Instance()->publishMsg(String("axxel 0: ") + (String)accel[0]);
+
 
 	msg.header.stamp = nh->now();
 	pub.publish(&msg);

@@ -39,8 +39,7 @@ class Servo_Motor : public ActuatorROS{
 			#ifdef SERVO_SHIELD
 			motor->setPWM(pin,0,us); // Equation to match arduino servo
 			#else
-			//motor.writeMicroseconds(1.125*us-50); // Equation to match servo shield
-			motor.writeMicroseconds(us);
+			motor.writeMicroseconds(1.125*us-50); // Equation to match servo shield
 			#endif
 		}
 
@@ -56,7 +55,7 @@ class Servo_Motor : public ActuatorROS{
 		unsigned int pwmNeutral;
 		unsigned int pwmMin;
 		unsigned int pwmMax;
-		float lastPwm;
+		unsigned int lastPwm;
 		float anglemin;
 		float anglemax;
 };
