@@ -1,8 +1,8 @@
 #ifndef SAILBOAT_ALL_CONFIG_H
 #define SAILBOAT_ALL_CONFIG_H
 //Choose the boat here
-//#define SAILBOAT_BOATLETTE
-#define SAILBOAT_PRO
+#define SAILBOAT_BOATLETTE
+//#define SAILBOAT_PRO
 
 #define VERSION_ARDUINO "2.0"
 
